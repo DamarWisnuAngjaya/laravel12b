@@ -29,7 +29,7 @@
                 </ul>
             </div>
             <div class="card-right">
-                <img src="{{ asset('images/about.jpg') }}" alt="Foto Profil">
+                <img src="{{ asset('images/pp.jpg') }}" alt="Foto Profil">
             </div>
         </div>
     </div>

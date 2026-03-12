@@ -27,7 +27,7 @@
                 <div class="contact-item"><span>Github</span> https://github.com/DamarWisnuAngjaya</div>
             </div>
             <div class="card-right">
-                <img src="{{ asset('images/about.jpg') }}" alt="Foto Profil">
+                <img src="{{ asset('images/pp.jpg') }}" alt="Foto Profil">
             </div>
         </div>
     </div>

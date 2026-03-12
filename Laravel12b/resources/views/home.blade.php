@@ -28,7 +28,7 @@
                 <p>- Tanggal lahir 11/09/2006</p>
             </div>
             <div class="card-right">
-                <img src="{{ asset('images/Albedo.png') }}" alt="Foto Profil">
+                <img src="{{ asset('images/pp.jpg') }}" alt="Foto Profil">
             </div>
         </div>
     </div>
