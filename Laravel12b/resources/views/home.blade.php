@@ -23,7 +23,7 @@
             <div class="card-left">
                 <p class="label">N A M A &nbsp; S A Y A</p>
                 <h1>Damar Wisnu <span class="red">Angjaya</span></h1>
-                <p>- Hobi gaming</p>
+                <p>- Sedang belajar laravel</p>
                 <p>- Tempat lahir di Lamongan</p>
                 <p>- Tanggal lahir 11/09/2006</p>
             </div>
