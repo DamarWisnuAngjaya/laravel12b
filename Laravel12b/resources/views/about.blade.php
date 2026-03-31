@@ -13,10 +13,10 @@
 <nav class="navbar">
     <div class="nav-brand">Design<span>Hub</span></div>
     <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html" class="active">About</a>
-        <a href="features.html">Fitur</a>
-        <a href="contact.html">Kontak</a>
+        <a href="home">Home</a>
+        <a href="about" class="active">About</a>
+        <a href="features">Fitur</a>
+        <a href="contact">Kontak</a>
         <a href="#" class="nav-cta">Mulai Gratis</a>
     </div>
 </nav>
@@ -29,24 +29,6 @@
             <h1>Kami Membangun<br><span style="color:var(--accent)">Jembatan</span><br>Kreatif</h1>
             <p style="margin-top:1.5rem;">DesignHub lahir dari satu keyakinan: <strong style="color:var(--text)">setiap bisnis berhak mendapatkan desain berkualitas tinggi</strong>, dan setiap desainer berbakat berhak mendapatkan klien yang menghargai karya mereka.</p>
             <p style="margin-top:1rem;">Didirikan pada 2022 di Jakarta, kami kini menghubungkan lebih dari 3,200 desainer profesional dengan ribuan bisnis dari Sabang hingga Merauke.</p>
-        </div>
-        <div class="about-visual">
-            <div class="about-visual-card" style="background: var(--surface); border: 1px solid rgba(200,255,62,0.2);">
-                <div class="about-num">2022</div>
-                <div class="about-label">Tahun Berdiri</div>
-            </div>
-            <div class="about-visual-card" style="background: var(--surface); border: 1px solid rgba(124,58,237,0.3);">
-                <div class="about-num">3.2k+</div>
-                <div class="about-label">Desainer Aktif</div>
-            </div>
-            <div class="about-visual-card" style="background: var(--surface); border: 1px solid rgba(244,114,182,0.3);">
-                <div class="about-num">34</div>
-                <div class="about-label">Kota di Indonesia</div>
-            </div>
-            <div class="about-visual-card" style="background: var(--surface); border: 1px solid rgba(200,255,62,0.2);">
-                <div class="about-num">98%</div>
-                <div class="about-label">Tingkat Kepuasan</div>
-            </div>
         </div>
     </div>
 </section>

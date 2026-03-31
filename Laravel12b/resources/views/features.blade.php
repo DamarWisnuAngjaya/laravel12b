@@ -147,10 +147,10 @@
 <nav class="navbar">
     <div class="nav-brand">Design<span>Hub</span></div>
     <div class="nav-links">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="features.html" class="active">Fitur</a>
-        <a href="contact.html">Kontak</a>
+        <a href="home">Home</a>
+        <a href="about">About</a>
+        <a href="features" class="active">Fitur</a>
+        <a href="contact">Kontak</a>
         <a href="#" class="nav-cta">Mulai Gratis</a>
     </div>
 </nav>

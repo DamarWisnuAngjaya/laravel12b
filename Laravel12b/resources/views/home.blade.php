@@ -34,6 +34,7 @@
     </div>
 </section>
 
+<<<<<<< HEAD
 <section class="section services-section">
     <div class="section-header">
         <span class="section-eyebrow">Kategori Jasa</span>
@@ -144,6 +145,19 @@
                     <div class="author-name">Reza Firmansyah</div>
                     <div class="author-role">Product Manager, Gojek</div>
                 </div>
+=======
+    <div class="hero">
+        <div class="card">
+            <div class="card-left">
+                <p class="label">N A M A &nbsp; S A Y A</p>
+                <h1>Damar Wisnu <span class="red">Angjaya</span></h1>
+                <p>- Sedang belajar laravel</p>
+                <p>- Tempat lahir di Lamongan</p>
+                <p>- Tanggal lahir 11/09/2006</p>
+            </div>
+            <div class="card-right">
+                <img src="{{ asset('images/pp.jpg') }}" alt="Foto Profil">
+>>>>>>> 83d9c19ee6090f144faa2e7f372c4d9df9cd937a
             </div>
         </div>
     </div>
