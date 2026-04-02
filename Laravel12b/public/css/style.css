@@ -125,6 +125,23 @@ main {
     margin-top: 50px;
 }
 
+/*Button*/
+.btn-start {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #84cc16; /* hijau seperti teks */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-start:hover {
+  background-color: #65a30d;
+}
+
 /* BADGE */
 .badge {
     display: inline-block;

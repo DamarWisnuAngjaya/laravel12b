@@ -9,14 +9,14 @@
 
     <div class="hero-content">
         <span class="hero-badge">Platform desainer</span>
-
         <h1>
             Crea<span>ont</span>
         </h1>
-
         <p>
             Platform desain modern untuk kebutuhan digital Anda dengan kualitas profesional.
         </p>
+        <a href="#" class="btn-start">Mulai Sekarang</a>
+
     </div>
 
 </section>

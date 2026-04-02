@@ -13,7 +13,12 @@
     <div class="about-grid">
         <div class="about-card">
             <h3>Visi</h3>
-            <p>Menjadi platform desain terbaik yang membantu desainer dan client.</p>
+            <p>Menjadi platform desain yang membantu para desainer dan client.</p>
+        </div>
+
+        <div class="about-card">
+            <h3>Singkat saja</h3>
+            <p>Creaont adalah platform yang menghubungkan Anda dengan desainer profesional untuk memenuhi berbagai kebutuhan desain digital. Mulai dari pembelian desain siap pakai hingga pemesanan jasa desain kustom. Kami hadir untuk membantu individu maupun bisnis mendapatkan solusi desain berkualitas dengan cepat, aman, dan sesuai kebutuhan.</p>
         </div>
 
         <div class="about-card">
@@ -21,10 +26,6 @@
             <p>Menyediakan solusi kreatif berkualitas tinggi.</p>
         </div>
 
-        <div class="about-card">
-            <h3>Tim</h3>
-            <p>Berisi desainer profesional dan kreatif.</p>
-        </div>
     </div>
 </section>
 
