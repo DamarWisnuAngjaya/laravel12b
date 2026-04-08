@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
+
+Route::resource('categories', CategoryController::class);
+
+Route::resource('users', UserController::class);
 
 Route::get('/welcome', function () {
     return view('welcome');

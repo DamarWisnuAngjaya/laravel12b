@@ -454,3 +454,27 @@ main {
         font-size: 32px;
     }
 }
+
+.container {
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 10px;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
