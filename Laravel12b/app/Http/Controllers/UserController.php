@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -19,7 +21,19 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        User::create($request->all());
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'role' => 'required',
+            'photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
+        ]);
+
+        if ($request->hasFile('photo')) {
+            $data['photo'] = $request->file('photo')->store('users', 'public');
+        }
+
+        User::create($data);
+
         return redirect('/users');
     }
 
@@ -31,13 +45,38 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        User::findOrFail($id)->update($request->all());
+        $user = User::findOrFail($id);
+
+        $data = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'role' => 'required',
+            'photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
+        ]);
+
+        if ($request->hasFile('photo')) {
+            if ($user->photo) {
+                Storage::disk('public')->delete($user->photo);
+            }
+
+            $data['photo'] = $request->file('photo')->store('users', 'public');
+        }
+
+        $user->update($data);
+
         return redirect('/users');
     }
 
     public function destroy($id)
     {
-        User::destroy($id);
+        $user = User::findOrFail($id);
+
+        if ($user->photo) {
+            Storage::disk('public')->delete($user->photo);
+        }
+
+        $user->delete();
+
         return redirect('/users');
     }
 }
