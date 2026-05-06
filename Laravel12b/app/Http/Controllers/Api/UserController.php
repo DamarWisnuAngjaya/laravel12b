@@ -14,74 +14,55 @@ class UserController extends Controller
         return response()->json(User::all());
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required',
-            'photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
-        ]);
-
-        $photoPath = null;
-
-        if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('users', 'public');
-        }
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'photo' => $photoPath
-        ]);
-
-        return response()->json($user, 201);
-    }
-
-    public function show(string $id)
+    public function show($id)
     {
         return response()->json(User::findOrFail($id));
     }
 
-    public function update(Request $request, string $id)
+    public function store(Request $request)
     {
-        $user = User::findOrFail($id);
-
-        $request->validate([
+        $data = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
-            'photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048'
+            'role' => 'required',
+            'photo' => 'nullable|image'
         ]);
 
         if ($request->hasFile('photo')) {
-            if ($user->photo) {
-                Storage::disk('public')->delete($user->photo);
-            }
-
-            $user->photo = $request->file('photo')->store('users', 'public');
+            $data['photo'] = $request->file('photo')->store('users', 'public');
         }
 
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email
-        ]);
-
-        $user->save();
-
-        return response()->json($user);
+        return response()->json(User::create($data));
     }
 
-    public function destroy(string $id)
-    {
-        $user = User::findOrFail($id);
+    public function update(Request $request, $id)
+        {
+            $user = User::findOrFail($id);
 
-        if ($user->photo) {
-            Storage::disk('public')->delete($user->photo);
+            $data = $request->validate([
+                'name' => 'required',
+                'email' => 'required|email',
+                'role' => 'required',
+                'photo' => 'nullable|image'
+            ]);
+
+            if ($request->hasFile('photo')) {
+                if ($user->photo) {
+                    Storage::disk('public')->delete($user->photo);
+                }
+
+                $data['photo'] = $request->file('photo')->store('users', 'public');
+            }
+
+            $user->update($data);
+
+            return response()->json($user);
         }
 
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
         $user->delete();
-
-        return response()->json(['message' => 'User deleted']);
+        return response()->json(['message' => 'User deleted successfully']);
     }
 }
